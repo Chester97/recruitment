@@ -1,0 +1,40 @@
+.top-bar {
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    padding: 15px 0;
+}
+.top-bar--item {
+    text-decoration: none;
+    @include font-mix($fs-small,$dark-main,$fw-light);
+    margin-left: 10px;
+}
+.top-bar--container {
+    display: flex;
+    justify-content: space-between;
+}
+.top-bar--left,
+.top-bar--right {
+    display: flex;
+}
+.top-bar--icon {
+    max-width: 100%;
+    max-height: 100%;
+    height: inherit !important;
+}
+.top-bar--item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-right: $sp-medium;
+}
+.top-bar--phone-container,
+.top-bar--login-container {
+    margin-right: $sp-medium;
+}
+.top-bar--left {
+    @media screen and (max-width: 900px) {
+        & {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+.app-container {
+    transition: filter 0.3s;
+    filter: brightness(1) blur(0px);
+
+    @media screen and (max-width: 900px) {
+        &.dim {
+            filter: brightness(0.7) blur(4px);
+        }
+    }
+}
+
+.main-header--top {
+    padding: 1.87rem 0 3.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top--item {
+    @media screen and (min-width: 901px) {
+        & {
+            flex:1;
+        }
+    }
+}
+
+.header-top--input {
+    width: 100%;
+    border: none;
+    border-bottom: $br-dark;
+    padding: 8px 5px;
+    background-image: url('../../assets/loupe.svg');
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    outline: none;
+    opacity: 0.5;
+    transition: .3s ease;
+
+    &:focus {
+        opacity: 1;
+    }
+}
+.header-top--input-container.header-top--item {
+    @media screen and (max-width: 900px) {
+        & {
+            flex:1;
+            margin:0 25px;
+        }
+    }
+}
+
+.header-top--basket-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-top-basket--name {
+    @include font-mix($sp-small-medium, $default, $fw-medium);
+    padding-left: 10px;
+}
+.header-top--basket-img {
+}
+.header-basket--wrapper {
+    position: relative;
+}
+.header-top--basket-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $fancy;
+    color: $default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $sp-small;
+    font-weight: $fw-light;
+    position: absolute;
+    top:55%;
+    left:77%
+}
+.top-bar--container .header-top--logo {
+    @media screen and (max-width: 500px) {
+        & {
+            display: none;
+        }
+    }
+}
+.top-bar--container {
+    @media screen and (max-width: 500px) {
+        & {
+            justify-content: center;
+        }
+    }
+}
+.header-top--basket-container.header-top--item {
+    @media screen and (max-width: 500px) {
+        & {
+            display: none;
+        }
+    }
+}
+.header-top--logo-container {
+    
+    @media screen and (max-width: 900px) {
+        & {
+            display: none;
+        }
+    }
+}
+.hamburger-container {
+    display: none;
+    @media screen and (max-width: 900px) {
+        & {
+            display: block;
+        }
+    }
+}
